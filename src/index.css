@@ -1,13 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, #7b6ecf,#584da5, #292257);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+    width: 30%;
+}
+
+.todo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    border: 1px solid #cecece;
+    background-color: #ffffff;
+    box-shadow: 0 0 1em #241b5a;
+    border-radius: 15px;
+}
+
+h1{
+    color: #171618;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.todo-list {
+    width: 80%;
+    word-wrap: break-word;
+    list-style-type: none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f0f6fc;
+    border-radius: 8px;
+}
+
+.complete {
+    color:#c2c5d6;
+    text-decoration: line-through;
+}
+
+.close-icon {
+    margin: 0 10px;
+    color:#889cac;
+}
+
+.close-icon:hover {
+    color:#d61414;
+    cursor: pointer;
+}
+
+.input-task {
+    width: 70%;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.input-task:focus { 
+    outline: none !important;
+    border-radius: 5px;
+    border: 2px solid #8caaca;
+}
+
+button {
+    background-color: #29d175;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+button:hover {
+    background-color: #33b970;
+    cursor: pointer;
 }
