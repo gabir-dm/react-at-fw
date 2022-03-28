@@ -22,11 +22,11 @@ function TodoList() {
         setTaskList(updateTask)
     }
 
-    // function handleRemoveTask(id) {
-    //     const removeItem = [...taskList].filter(task => task.id !== id)
+    function handleRemoveTask(id) {
+        const removeItem = [...taskList].filter(task => task.id !== id)
         
-    //     setTaskList(removeItem)
-    // }
+        setTaskList(removeItem)
+    }
 
     return (
         <div className='todo-wrapper'>
@@ -37,7 +37,7 @@ function TodoList() {
             <ul className='todo-list'>
                 {taskList.map(item => 
                     (<li className={item.isComplete ? 'list-item complete' : 'list-item'} key={item.id}> 
-                        <RiCloseCircleLine className='close-icon'/>
+                        <button className='close-icon-btn' onClick={() => handleRemoveTask(item.id)}><RiCloseCircleLine className='close-icon'/></button>
                         <input type="checkbox" onChange={() => completeTask(item.id)}/> 
                         {item.title} 
                      </li>))

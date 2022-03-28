@@ -61,13 +61,11 @@ form {
 }
 
 .close-icon {
-    margin: 0 10px;
     color:#889cac;
 }
 
 .close-icon:hover {
-    color:#d61414;
-    cursor: pointer;
+    color:#bd2020;
 }
 
 .input-task {
@@ -83,7 +81,7 @@ form {
     border: 2px solid #8caaca;
 }
 
-button {
+.add-task-btn {
     background-color: #29d175;
     color: #ffffff;
     border: none;
@@ -91,7 +89,22 @@ button {
     padding: 8px;
 }
 
-button:hover {
+.add-task-btn:hover {
     background-color: #33b970;
+    cursor: pointer;
+}
+
+.close-icon-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    border: none;
+    background-color: #f0f6fc;
+    width: 20px;
+    margin: 0 15px 0 5px;
+}
+
+.close-icon-btn:hover {
     cursor: pointer;
 }

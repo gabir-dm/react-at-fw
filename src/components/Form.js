@@ -24,7 +24,7 @@ function Form(props) {
     return(
         <form onSubmit={handleAddTaskToList}> 
             <input className="input-task" type="text" placeholder='Adicione uma tarefa.' onChange={handleTaskInput} value={task} />
-            <button type="submit" onClick={handleAddTaskToList}>Adicionar</button>
+            <button type="submit" className="add-task-btn" onClick={handleAddTaskToList}>Adicionar</button>
         </form>
     )
 }
