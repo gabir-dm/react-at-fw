@@ -29,20 +29,23 @@ function TodoList() {
     }
 
     return (
-        <div className='todo-wrapper'>
-            <h1>Lista de Tarefas</h1>
+        <div>
+            <div className='todo-wrapper'>
+                <h1>Lista de Tarefas</h1>
 
-            <Form onSubmit={handleAddTaskToList} /> 
+                <Form onSubmit={handleAddTaskToList} /> 
 
-            <ul className='todo-list'>
-                {taskList.map(item => 
-                    (<li className={item.isComplete ? 'list-item complete' : 'list-item'} key={item.id}> 
-                        <button className='close-icon-btn' onClick={() => handleRemoveTask(item.id)}><RiCloseCircleLine className='close-icon'/></button>
-                        <input type="checkbox" onChange={() => completeTask(item.id)}/> 
-                        {item.title} 
-                     </li>))
-                } 
-            </ul>
+                <ul className='todo-list'>
+                    {taskList.map(item => 
+                        (<li className={item.isComplete ? 'list-item complete' : 'list-item'} key={item.id}> 
+                            <button className='close-icon-btn' onClick={() => handleRemoveTask(item.id)}><RiCloseCircleLine className='close-icon'/></button>
+                            <input type="checkbox" onChange={() => completeTask(item.id)}/> 
+                            {item.title} 
+                        </li>))
+                    } 
+                </ul>
+            </div>
+            <div className="footer-app"><span>Assessment da disciplina Frameworks Front-End e Conexão com Back-End - Gabriela Melo</span></div>
         </div>
     )
 }

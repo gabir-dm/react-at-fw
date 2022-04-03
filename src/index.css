@@ -108,3 +108,11 @@ form {
 .close-icon-btn:hover {
     cursor: pointer;
 }
+
+.footer-app {
+    color: #1c1448;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
